@@ -2,11 +2,16 @@ var webpack = require('webpack');
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+var extractScreenCSS = new ExtractTextPlugin('screen.css', { allChunks: true });
+var extractPrintCSS = new ExtractTextPlugin('print.css', { allChunks: true });
+
+
 module.exports = {
   entry: {
     'app': './javascript/main.js',
     'editor': './javascript/editor.js',
-    'styles': './sass/styles.scss'
+    'screen': './sass/screen.scss',
+    'print': './sass/print.scss'
   },
   output: {
     path: __dirname + '/gen',
@@ -15,8 +20,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+        test: /screen\.scss$/,
+        loader: extractScreenCSS.extract('style-loader', 'css-loader!sass-loader')
+      },
+      {
+        test: /print\.scss$/,
+        loader: extractPrintCSS.extract('style-loader', 'css-loader!sass-loader')
       },
       {
         test: [/ace-builds.*/, /.*ace-mode-beancount.*/],
@@ -30,8 +39,7 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
     }),
-    new ExtractTextPlugin('styles.css', {
-      allChunks: true
-    })
+    extractScreenCSS,
+    extractPrintCSS
   ],
 }

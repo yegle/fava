@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gen/print.css') }}">
+</head>
+<body>
+    <h1>Income Statement</h1>
+    {% set income = api.balances(options['name_income']) %}
+    {% set expenses = api.balances(options['name_expenses']) %}
+
+    <article>
+        <div class="tables">
+            <div id="income">
+                {% with table_title="Income", table_data=income, totals=True %}
+                    {% include "_tree_table.html" %}
+                {% endwith %}
+            </div>
+            <div id="expenses">
+                {% with table_title="Expenses", table_data=expenses, totals=True %}
+                    {% include "_tree_table.html" %}
+                {% endwith %}
+            </div>
+        </div>
+    </article>
+</body>
+</html>

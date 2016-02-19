@@ -6,6 +6,8 @@ from datetime import datetime
 from flask import (abort, Flask, flash, render_template, url_for, request,
                    redirect, send_from_directory, g)
 
+from flask_weasyprint import HTML, render_pdf
+
 from fava.api import BeancountReportAPI, FilterException
 from fava.api.serialization import BeanJSONEncoder
 
@@ -113,6 +115,16 @@ def get_stored_query(stored_query_hash=None):
 @app.route('/journal/')
 def journal():
     return render_template('journal.html')
+
+
+@app.route('/journal.pdf.html')
+def journal_pdf_html():
+    return render_template('reports/journal.pdf.html')
+
+
+@app.route('/journal.pdf')
+def journal_pdf():
+    return render_pdf(url_for('journal_pdf_html'))
 
 
 @app.route('/source/', methods=['GET', 'POST'])
