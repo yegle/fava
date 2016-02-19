@@ -36,7 +36,8 @@ setup(
     install_requires=[
         'beancount>=2.0b6',
         'Flask>=0.10.1',
-        'livereload>=2.4.1'
+        'livereload>=2.4.1',
+        'Flask-WeasyPrint>=0.5'
     ],
     zip_safe=False,
     classifiers=[
