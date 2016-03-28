@@ -1,0 +1,16 @@
+.tox
+docs/_build
+*.pyc
+/dist/
+/build/
+/*.egg-info
+*sass-cache*/
+*.css.map
+TODO.md
+fava/static/gen/
+*.webassets-cache*/
+fava/static/stylesheets/packed*.js
+TODO
+
+node_modules
+.cache/

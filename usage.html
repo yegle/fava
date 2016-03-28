@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting Started &mdash; fava 0.2.6 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2.6',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="fava 0.2.6 documentation" href="index.html" />
+    <link rel="next" title="Screenshots" href="screenshots.html" />
+    <link rel="prev" title="Welcome to fava!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>If you&#8217;re new to beancount or double-entry accounting in general, we
+recommend <a class="reference external" href="https://docs.google.com/document/d/1e4Vz3wZB_8-ZcAwIFde8X5CjzKshE4-OXtVVHm4RQ8s/">Command-line Accounting in Context</a>,
+a motivational document written by Martin Blais, the author of beancount.</p>
+<p>To learn how to create your beancount file, refer to <a class="reference external" href="https://docs.google.com/document/d/1P5At-z1sP8rgwYLHso5sEy3u4rMnIUDDgob9Y_BYuWE/">Getting Started with
+Beancount</a>
+guide. Martin Blais has written a great deal of very detailed documention for
+beancount, see the <a class="reference external" href="https://docs.google.com/document/d/1RaondTJCS_IUPBHFNdT8oqFKJjVJDsfsn6JEjBG04eA">Beancount Documentation</a>
+page for an index of the available documentation.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>fava can run wherever a Python 3.4+ installation is available, and is
+known to run on Mac OSX, Linux, and Cygwin.</p>
+<p>Note that developing on fava requires npm and NodeJS, both available on Mac OSX
+and Linux, but currently not on Cygwin. See <a class="reference internal" href="development.html"><em>Development</em></a> for more
+information on how to get started developing on fava.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>You will need <a class="reference external" href="https://www.python.org/downloads/">Python 3</a> (at least version 3.4).
+Then you can use <code class="docutils literal"><span class="pre">pip</span></code> to install fava by running:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>pip3 install beancount-fava
+</pre></div>
+</div>
+<p>which will also pull in all required dependencies including beancount, if you
+don&#8217;t have it installed already.</p>
+</div>
+<div class="section" id="starting-fava">
+<h2>Starting fava<a class="headerlink" href="#starting-fava" title="Permalink to this headline">¶</a></h2>
+<p>Start fava by running:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>fava ledger.beancount
+</pre></div>
+</div>
+<p>pointing it to your beancount file &#8211; and visit the web interface at
+<a class="reference external" href="http://localhost:5000">http://localhost:5000</a>.</p>
+<p>There are some command-line options available, run <code class="docutils literal"><span class="pre">fava</span> <span class="pre">--help</span></code> for an overview.</p>
+<p>For more information on fava&#8217;s features, refer to the help pages that are
+available through fava&#8217;s web-interface.  fava comes with Gmail-style keyboard
+shortcuts; press <code class="docutils literal"><span class="pre">?</span></code> to show an overview.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/logo.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">fava</h1>
+    
+  </a>
+</p>
+
+
+
+<p class="blurb">Web interface for <a href="http://furius.ca/beancount/"
+title="Double-entry bookkeeping software Beancount">Beancount</a></p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starting-fava">Starting fava</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="screenshots.html">Screenshots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://github.com/aumayr/fava/issues">Issue Tracker</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/aumayr/fava">fava @ Github</a></li>
+    
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Dominik Aumayr.
+      
+      |
+      <a href="_sources/usage.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
